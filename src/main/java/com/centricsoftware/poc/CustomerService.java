@@ -71,7 +71,8 @@ public class CustomerService {
 	}
 
 	public List<Customer> doesCustomerExistByFirstName(String firstName) {
-		StringBuffer test = qbuilder(firstName);
+		//StringBuffer test = qbuilder(firstName);
+		StringBuffer test = qbuilder("David");
 		test.replace(5, 6, "T");
 
 		Query notThat = em.createNativeQuery(test.toString(), Customer.class);
